@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your fridge and bar</title>
 </head>
+
 <body>
-    
+    <form id="search-form">
+        <label><input type="checkbox" name="health[]" value="keto"> Keto</label>
+        <label><input type="checkbox" name="health[]" value="vegan"> Vegan</label>
+        <label><input type="checkbox" name="health[]" value="vegetarian"> Vegetarian</label>
+        <label><input type="checkbox" name="health[]" value="gluten"> Gluten-free</label>
+        <input type="text" id="user-input">
+        <button id="search-btn" type="submit"></button>
+    </form>
+    <script src="./logic.js"></script>
 </body>
+
 </html>
