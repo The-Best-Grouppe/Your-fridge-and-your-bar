@@ -1,22 +1,11 @@
 var searchBtn = document.getElementById("search-btn");
 var userInput = document.getElementById("user-input");
 var searchForm = document.getElementById("search-form");
-var checkBoxes = []// const options = {
-//   method: "GET",
-//   headers: {
-//     "X-RapidAPI-Key": "b3793bd39emshcc15e4cd130ffb5p1e653ajsn772e1a28b9ea",
-//     "X-RapidAPI-Host": "edamam-recipe-search.p.rapidapi.com",
-//   },
-// };
-
-
-
-// var userInput = "chicken";
+var checkBoxes = [];
 
 function getRecipe(inputObject) {
   if (inputObject.parameters.includes("keto")) {
     var ketoParam = "&health=keto-friendly";
-    // var ketoParam = "&health=keto-friendly";
     console.log("keto");
   } else {
     ketoParam = "";
@@ -31,14 +20,12 @@ function getRecipe(inputObject) {
 
   if (inputObject.parameters.includes("vegetarian")) {
     var vegetarianParam = "&health=vegetarian";
-    // var ketoParam = "&health=keto-friendly";
     console.log("veg");
   } else {
     vegetarianParam = "";
   }
   if (inputObject.parameters.includes("gluten")) {
     var glutenParam = "&health=gluten-free";
-    // var ketoParam = "&health=keto-friendly";
     console.log("gluten");
   } else {
     glutenParam = "";
@@ -59,13 +46,13 @@ function getRecipe(inputObject) {
         return;
       }
 
-      // Examine the text in the response
       response.json().then(function (data) {
         console.log(data);
         console.log(data.hits[0].recipe.label);
         console.log(data.hits[0].recipe.calories);
         console.log(data.hits[0].recipe.healthLabels);
         console.log(data.hits[0].recipe.url);
+        console.log(data.hits[0]);
         console.log(data.hits[0].recipe.ingredientLines);
       });
     })
@@ -97,7 +84,7 @@ function submitForm(event) {
 }
 
 // searchForm.addEventListener("submit", submitForm);
-
+var buttonContainer = document.getElementById("button-container");
 var cocktailEl = document.getElementById("cocktail");
 var cocktailBtn = document.getElementById("cocktail-btn");
 
@@ -156,3 +143,4 @@ function cocktail(event) {
 }
 
 cocktailBtn.addEventListener("click", cocktail);
+searchForm.addEventListener("submit", submitForm);
