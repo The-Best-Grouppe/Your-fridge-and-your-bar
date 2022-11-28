@@ -41,10 +41,11 @@
     border-radius: 0 5000px 5000px 0;
     font-size: 0.8rem;
   } */
-.h1 {
-  font-family: 'Eater', cursive;
-font-family: 'Sansita Swashed', cursive;
-}
+  h1 {
+  
+    font-family: 'Pacifico', cursive;
+    font-size: 85px;
+  }
 
 .hero-full-screen {
     height: 100vh;
@@ -62,41 +63,50 @@ font-family: 'Sansita Swashed', cursive;
             justify-content: space-between;
     background: url("https://images.unsplash.com/photo-1532634922-8fe0b757fb13?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80") center center no-repeat;
     background-size: cover;
-    font: black;
+    text-align: center;
+    font: white;
   }
   
   .hero-full-screen .middle-content-section {
     text-align: center;
-    color: black;
+    color: white;
+
+ 
   }
   
   .hero-full-screen .top-content-section {
     width: 100%;
+    text-align: center;
   }
   
   .hero-full-screen .bottom-content-section {
     padding: 1rem;
+    text-align: center;
   }
   
   .hero-full-screen .bottom-content-section svg {
     height: 3.75rem;
     width: 3.75rem;
-    fill: black;
+    fill: white;
+    text-align: center;
   }
   
   .hero-full-screen .top-bar {
     background: transparent;
+    text-align: center;
   }
   
   .hero-full-screen .top-bar .menu {
     background: transparent;
     align-items: center;
+    text-align: center;
     
 
   }
   
   .hero-full-screen .top-bar .menu-text {
-    color: black;
+    color: white;
+    text-align: center;
   }
   
   .hero-full-screen .top-bar .menu li {
@@ -106,16 +116,15 @@ font-family: 'Sansita Swashed', cursive;
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
+            text-align: center;
   }
   
   .hero-full-screen .top-bar .menu a {
-    color: black;
+    color: white;
     font-weight: bold;
+    text-align: center;
   }
 
-  .h1 {
-    font-family: 'Eater', cursive;
-  font-family: 'Sansita Swashed', cursive;
-  }
+
   
   
