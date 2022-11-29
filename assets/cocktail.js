@@ -56,4 +56,5 @@ function cocktail(event) {
     });
 }
 
+cocktail();
 cocktailBtn.addEventListener("click", cocktail);

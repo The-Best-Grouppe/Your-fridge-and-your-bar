@@ -3,20 +3,19 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Foundation Starter Template</title>
-
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Eater&family=Sansita+Swashed:wght@500&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="./assets/styles.css">
+  <title>Your Fridge & Your Bar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/styles.css" />
 </head>
 
 <body>
-    <form id="search-form">
+    <!-- <form id="search-form">
         <label><input type="checkbox" name="health[]" value="keto"> Keto</label>
         <label><input type="checkbox" name="health[]" value="vegan"> Vegan</label>
         <label><input type="checkbox" name="health[]" value="vegetarian"> Vegetarian</label>
@@ -24,12 +23,11 @@
         <input type="text" id="user-input">
         <button id="search-btn" type="submit"></button>
     </form> -->
-    
 
   <!-- <div class="top-bar topbar-center-logo" id="topbar-center-logo">
       <div class="top-bar-left">
         <ul class="menu horizontal medium-horizontal">
-          <li><a href="#">Home</a></li>
+          <li><a href="#">Home</a></li>git restore --staged READ
           <li><a href="#">About Us</a></li>
         </ul>
       </div>
@@ -39,14 +37,110 @@
 
   <!-- </div> -->
   <div class="hero-full-screen">
-
     <div class="middle-content-section">
-      <h1>Super Compelling Headline</h1>
-      <form>
-        <label for="food">What's in Your Fridge?</label>
-        <input type="text" id="food">
-        <button id="submit">Submit</button>
-      </form>
+      <h1>Your BF (Bar & Fridge)</h1>
+      <p>In a world where take-out options are endless but can be expensive, sometimes we just want a nice, homemade
+        meal to satisfy our stomachs.
+        Even then, we can struggle to find the perfect recipe for the ingredients readily available in our
+        refrigerator.
+        Let us help! Enter what you have available in your fridge, and we will give you a recipe you can make at home!
+      </p>
+
+      <div>
+        <h2>Want to try a new cocktail to go along with your meal? Click the cocktail button to generate a random drink!
+        </h2>
+      </div>
+
+      <div class="foodContainer">
+        <fieldset class="fieldset">
+          <legend>Allergies / Diet Type</legend>
+          <input id="vegancheck" type="checkbox"><label for="vegancheck">Vegan</label>
+          <input id="gfcheck" type="checkbox"><label for="gfcheck">Gluten-Free</label>
+          <input id="vegcheck" type="checkbox"><label for="vegcheck">Vegetarian</label>
+          <input id="ketocheck" type="checkbox"><label for="ketocheck">Keto</label>
+        </fieldset>
+
+        <div class="input-group">
+          <span class="input-group-label">Enter an ingredient.</span>
+          <input class="input-group-field middle" type="text">
+          <div class="input-group-button">
+            <input type="submit" class="button" value="Submit">
+          </div>
+        </div>
+      </div>
+
+      <!-- START OF FOOD OUTPUT CARDS -->
+      <div class="food-output">
+        <div class="row">
+          <div class="card columns">
+            <div class="card-divider">
+              This is a header
+            </div>
+            <img src="assets/img/generic/rectangle-1.jpg">
+            <div class="card-section">
+              <h4>This is a card.</h4>
+              <p>It has an easy to override visual style, and is appropriately subdued.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="card columns">
+            <div class="card-divider">
+              This is a header
+            </div>
+            <img src="assets/img/generic/rectangle-1.jpg">
+            <div class="card-section">
+              <h4>This is a card.</h4>
+              <p>It has an easy to override visual style, and is appropriately subdued.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="card columns">
+          <div class="card-divider">
+            This is a header
+          </div>
+          <img src="assets/img/generic/rectangle-1.jpg">
+          <div class="card-section">
+            <h4>This is a card.</h4>
+            <p>It has an easy to override visual style, and is appropriately subdued.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="card columns">
+          <div class="card-divider">
+            This is a header
+          </div>
+          <img src="assets/img/generic/rectangle-1.jpg">
+          <div class="card-section">
+            <h4>This is a card.</h4>
+            <p>It has an easy to override visual style, and is appropriately subdued.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="card columns">
+          <div class="card-divider">
+            This is a header
+          </div>
+          <img src="assets/img/generic/rectangle-1.jpg">
+          <div class="card-section">
+            <h4>This is a card.</h4>
+            <p>It has an easy to override visual style, and is appropriately subdued.</p>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
 
       <!-- <div class="input-group input-group-rounded">
         <input class="input-group-field" type="search">
@@ -54,10 +148,11 @@
           <input type="submit" class="button secondary" value="Enter Your Favorite Ingredient">
         </div>
       </div> -->
+
       <div class="container">
-        <ul>
-          <li>Click for Your Random Drink <a href="cocktail.html">/////</a></li>
-        </ul>
+
+        <a class="button warning small-only-expanded" href="cocktail.html">Click here for a cocktail pairing!</a>
+
         </form>
       </div>
 
@@ -65,6 +160,8 @@
       <script src="js/vendor/jquery.js"></script>
       <script src="js/vendor/what-input.js"></script>
       <script src="js/vendor/foundation.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/js/foundation.min.js"
+        crossorigin="anonymous"></script>
       <script>
         $(document).foundation();
       </script>
