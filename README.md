@@ -27,8 +27,9 @@ We've utilized APIs to retrieve information on recipes as well as generating a r
 Simply search for a recipe, and click the button to generate a cocktail!
 
     
-    ![alt text](assets/images/screenshot.png)
-    
+   
+    ![Yourfridge](https://user-images.githubusercontent.com/114694158/204628116-b2ad97c1-16b1-425f-a3e0-7d513b1376ec.png)
+
 
 ## Credits
 
