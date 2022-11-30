@@ -54,3 +54,7 @@ Simply search for a recipe, and click the button to generate a cocktail!
 * [Edamam Food and Grocery Database](https://rapidapi.com/edamam/api/edamam-food-and-grocery-database)
 
  * [Front-end Framework: Foundation](https://get.foundation/)
+<<<<<<< HEAD
+
+=======
+>>>>>>> main
