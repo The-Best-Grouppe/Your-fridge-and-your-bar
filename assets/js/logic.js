@@ -24,20 +24,31 @@ function renderRecipe(hit) {
     var titleEl = document.createElement("h2");
     var calorieEl = document.createElement("p");
     var urlEl = document.createElement("a");
-    var ingredientEl = document.createElement("uo");
+    var ingredientEl = document.createElement("ul");
     var imgEl = document.createElement("img");
     var saveBtnEl = document.createElement("span");
 
-    recipeSection.append(recipeCard);
+    // recipeSection.append(recipeContainer);
+    // recipeContainer.append(recipeCard);
+    recipeCard.setAttribute("class", "card cell medium-8")
+    // recipeContainer.setAttribute("class", "cell small-6")
     titleEl.textContent = title;
-    calorieEl.textContent = calories;
+    calorieEl.textContent = calories + ": calories";
     imgEl.setAttribute("src", recipeImgUrl);
     urlEl.textContent = recipeUrl;
+    imgEl.setAttribute("width", "200px");
+    imgEl.setAttribute("class", "align-center card-section");
+    titleEl.setAttribute("class", "align-center card-section");
+    calorieEl.setAttribute("class", "align-center card-section");
+    ingredientEl.setAttribute("class", "align-center card-section");
+    urlEl.setAttribute("class", "align-center card-section");
+    recipeCard.setAttribute("style", "width: 300px")
+
     // saveBtn.innerHTML = "Save";
     // // saveBtn.setAttribute("type", "submit");
     // saveBtn.setAttribute("name", "save-button");
     // saveBtn.setAttribute("class", "save-button");
-    recipeCard.append(titleEl, imgEl, calorieEl, ingredientEl, urlEl, saveBtnEl);
+    recipeCard.append(titleEl, calorieEl, imgEl, ingredientEl, urlEl, saveBtnEl);
 
     for (var i=0; i < recipeIngredients.length; i++){
       var ingredientItem = document.createElement("li");
