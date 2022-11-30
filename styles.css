@@ -1,0 +1,120 @@
+
+.topbar-center-logo {
+  background: #2c3840;
+}
+
+.topbar-center-logo .menu {
+  background: #2c3840;
+}
+
+.topbar-center-logo .menu a {
+  color: #fefefe;
+}
+
+.topbar-center-logo .top-bar-center {
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+@media screen and (max-width: 39.9375em) {
+  .topbar-center-logo .top-bar-center {
+    display: none;
+  }
+}
+
+.topbar-center-logo-mobile {
+  background: #2c3840;
+}
+
+.topbar-center-logo-mobile .menu-icon {
+  vertical-align: text-top;
+}
+  
+  h1 {
+  
+    font-family: 'Pacifico', cursive;
+    font-size: 85px;
+  }
+
+.hero-full-screen {
+    height: 100vh;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background: url("https://images.unsplash.com/photo-1532634922-8fe0b757fb13?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80") center center no-repeat;
+    background-size: cover;
+    text-align: center;
+    font: white;
+  }
+  
+  .hero-full-screen .middle-content-section {
+    text-align: center;
+    color: white;
+
+ 
+  }
+  
+  .hero-full-screen .top-content-section {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .hero-full-screen .bottom-content-section {
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .hero-full-screen .bottom-content-section svg {
+    height: 3.75rem;
+    width: 3.75rem;
+    fill: white;
+    text-align: center;
+  }
+  
+  .hero-full-screen .top-bar {
+    background: transparent;
+    text-align: center;
+  }
+  
+  .hero-full-screen .top-bar .menu {
+    background: transparent;
+    align-items: center;
+    text-align: center;
+    
+
+  }
+  
+  .hero-full-screen .top-bar .menu-text {
+    color: white;
+    text-align: center;
+  }
+  
+  .hero-full-screen .top-bar .menu li {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+            text-align: center;
+  }
+  
+  .hero-full-screen .top-bar .menu a {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+  }
+
+
+  
+  
