@@ -236,7 +236,9 @@
   border: 2px solid black;
   border-radius: 15px;
   font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+  font-size: 20px;
+  background-color: rgba(241, 237, 237, 0.3) ;
+  color: white;
 }
 
 .drink-card img {
@@ -271,5 +273,10 @@
 
 #cocktail-btn {
   margin:auto;
-  /* width: 200px; */
+}
+
+#cocktail {
+  background: url("https://images.unsplash.com/photo-1532634922-8fe0b757fb13?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80") center center no-repeat;
+    background-size: cover;
+
 }
