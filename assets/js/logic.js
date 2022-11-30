@@ -44,7 +44,10 @@ function renderRecipe(hit) {
       ingredientItem.textContent = hit.recipe.ingredientLines[i];
       console.log(ingredientItem);
       ingredientEl.append(ingredientItem);
+
+    
     }
+
     // for (var i=0; i < 5; i++) {
     //   var saveBtn = document.createElement("button");
     //   saveBtn.innerText = "Save";
