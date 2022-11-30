@@ -11,10 +11,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css"
     crossorigin="anonymous">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="/assets/styles/styles.css" />
 </head>
 
 <body>
+   
+
   <!-- <div class="top-bar topbar-center-logo" id="topbar-center-logo">
       <div class="top-bar-left">
         <ul class="menu horizontal medium-horizontal">
@@ -27,6 +30,27 @@
       </div> -->
 
   <!-- </div> -->
+  <!--section for modal here -->
+  <div class="w3-container">
+    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">how to use this page</button>
+  
+    <div id="id01" class="w3-modal">
+      <div class="w3-modal-content">
+        <header class="w3-container w3-black"> 
+          <span onclick="document.getElementById('id01').style.display='none'" 
+          class="w3-button w3-display-topright">&times;</span>
+        </header>
+        <div class="w3-container">
+          <p>Enter left-over ingreidents from your fridge into the checkbox to generate related recipes. </p>
+          <p>We specialize in specalities, you can set the parameters for special diet restrictions to get 5 results related to you. Save these results to your personal favorites for easy access. These searches are saved for life unless the world ends and the interenet breaks down. Unlike your friends, we are always here for you :)</p>
+        </div>
+        <footer class="w3-container w3-black">
+          <p>Happy Cooking!</p>
+        </footer>
+      </div>
+    </div>
+  </div>
+  <!--end of modal -->
   <div class="hero-full-screen">
     <div class="middle-content-section">
       <h1>Your BF (Bar & Fridge)</h1>
@@ -41,27 +65,28 @@
         <h2>Want to try a new cocktail to go along with your meal? Click the cocktail button to generate a random drink!
         </h2>
       </div>
+      <form id="search-form">
+        <div class="foodContainer">
+          <fieldset class="fieldset">
+            <legend>Allergies / Diet Type</legend>
+            <input name="health[]" id="vegancheck" type="checkbox" value="vegan"><label for="vegancheck">Vegan</label>
+            <input name="health[]" id="gfcheck" type="checkbox" value="gluten"><label for="gfcheck">Gluten-Free</label>
+            <input name="health[]" id="vegcheck" type="checkbox" value="vegetarian"><label for="vegcheck">Vegetarian</label>
+            <input name="health[]" id="ketocheck" type="checkbox" value="keto"><label for="ketocheck">Keto</label>
+          </fieldset>
 
-      <div class="foodContainer">
-        <fieldset class="fieldset">
-          <legend>Allergies / Diet Type</legend>
-          <input id="vegancheck" type="checkbox"><label for="vegancheck">Vegan</label>
-          <input id="gfcheck" type="checkbox"><label for="gfcheck">Gluten-Free</label>
-          <input id="vegcheck" type="checkbox"><label for="vegcheck">Vegetarian</label>
-          <input id="ketocheck" type="checkbox"><label for="ketocheck">Keto</label>
-        </fieldset>
-
-        <div class="input-group">
-          <span class="input-group-label">Enter an ingredient.</span>
-          <input class="input-group-field middle" type="text">
-          <div class="input-group-button">
-            <input type="submit" class="button" value="Submit">
+          <div class="input-group">
+            <span class="input-group-label">Enter an ingredient.</span>
+            <input class="input-group-field middle" type="text" id="user-input">
+            <div class="input-group-button">
+              <input type="submit" class="button" value="Submit">
+            </div>
           </div>
         </div>
-      </div>
+      </form>
 
       <!-- START OF FOOD OUTPUT CARDS -->
-      <div class="food-output">
+      <!-- <div class="foodOutput-card">
         <div class="row">
           <div class="card columns">
             <div class="card-divider">
@@ -73,23 +98,15 @@
               <p>It has an easy to override visual style, and is appropriately subdued.</p>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <div class="row">
-          <div class="card columns">
-            <div class="card-divider">
-              This is a header
-            </div>
-            <img src="assets/img/generic/rectangle-1.jpg">
-            <div class="card-section">
-              <h4>This is a card.</h4>
-              <p>It has an easy to override visual style, and is appropriately subdued.</p>
-            </div>
-          </div>
+          <div class="card columns" id="recipe-card">
+            
         </div>
       </div>
 
-      <div class="row">
+      <!-- <div class="row">
         <div class="card columns">
           <div class="card-divider">
             This is a header
@@ -126,12 +143,7 @@
             <p>It has an easy to override visual style, and is appropriately subdued.</p>
           </div>
         </div>
-      </div>
-
-
-
-
-
+      </div> -->
 
       <!-- <div class="input-group input-group-rounded">
         <input class="input-group-field" type="search">
@@ -142,22 +154,28 @@
 
       <div class="container">
 
-        <a class="button warning small-only-expanded" href="#">Click here for a cocktail pairing!</a>
+        <a class="button warning small-only-expanded" href="cocktail.html">Click here for a cocktail pairing!</a>
 
         </form>
       </div>
 
 
-      <script src="js/vendor/jquery.js"></script>
+</body>
+
+
+      <!-- <script src="js/vendor/jquery.js"></script>
       <script src="js/vendor/what-input.js"></script>
-      <script src="js/vendor/foundation.min.js"></script>
+      <script src="js/vendor/foundation.min.js"></script> -->
       <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/js/foundation.min.js"
         crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
       <script>
         $(document).foundation();
       </script>
+      <script src="./assets/js/logic.js"></script>
+      
+      <!--script for modal-->
+      <script src="assets/js/modal.js"></script>
     </div>
-
-</body>
-
+    
 </html>
