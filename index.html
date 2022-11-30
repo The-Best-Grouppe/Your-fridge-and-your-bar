@@ -11,7 +11,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css"
     crossorigin="anonymous">
-  <link rel="stylesheet" href="./assets/styles.css" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="/assets/styles/styles.css" />
 </head>
 
 <body>
@@ -29,6 +30,29 @@
       </div> -->
 
   <!-- </div> -->
+  <!--section for modal here -->
+  <div class="w3-container">
+    <p>Use w3-container classes to create different sections in the modal (e.g. header & footer).</p>
+    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">The how tos'</button>
+  
+    <div id="id01" class="w3-modal">
+      <div class="w3-modal-content">
+        <header class="w3-container w3-teal"> 
+          <span onclick="document.getElementById('id01').style.display='none'" 
+          class="w3-button w3-display-topright">&times;</span>
+          <h2>Modal Header</h2>
+        </header>
+        <div class="w3-container">
+          <p>Some text..</p>
+          <p>Some text..</p>
+        </div>
+        <footer class="w3-container w3-teal">
+          <p>Modal Footer</p>
+        </footer>
+      </div>
+    </div>
+  </div>
+  <!--end of modal -->
   <div class="hero-full-screen">
     <div class="middle-content-section">
       <h1>Your BF (Bar & Fridge)</h1>
@@ -123,11 +147,6 @@
         </div>
       </div> -->
 
-
-
-
-
-
       <!-- <div class="input-group input-group-rounded">
         <input class="input-group-field" type="search">
         <div class="input-group-button">
@@ -143,17 +162,22 @@
       </div>
 
 
-      <script src="js/vendor/jquery.js"></script>
+</body>
+
+
+      <!-- <script src="js/vendor/jquery.js"></script>
       <script src="js/vendor/what-input.js"></script>
-      <script src="js/vendor/foundation.min.js"></script>
+      <script src="js/vendor/foundation.min.js"></script> -->
       <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/js/foundation.min.js"
         crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
       <script>
         $(document).foundation();
       </script>
       <script src="./assets/js/logic.js"></script>
+      
+      <!--script for modal-->
+      <script src="assets/js/modal.js"></script>
     </div>
-
-</body>
-
+    
 </html>
