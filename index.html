@@ -16,6 +16,8 @@
 </head>
 
 <body>
+   
+
   <!-- <div class="top-bar topbar-center-logo" id="topbar-center-logo">
       <div class="top-bar-left">
         <ul class="menu horizontal medium-horizontal">
@@ -65,27 +67,28 @@
         <h2>Want to try a new cocktail to go along with your meal? Click the cocktail button to generate a random drink!
         </h2>
       </div>
+      <form id="search-form">
+        <div class="foodContainer">
+          <fieldset class="fieldset">
+            <legend>Allergies / Diet Type</legend>
+            <input name="health[]" id="vegancheck" type="checkbox" value="vegan"><label for="vegancheck">Vegan</label>
+            <input name="health[]" id="gfcheck" type="checkbox" value="gluten"><label for="gfcheck">Gluten-Free</label>
+            <input name="health[]" id="vegcheck" type="checkbox" value="vegetarian"><label for="vegcheck">Vegetarian</label>
+            <input name="health[]" id="ketocheck" type="checkbox" value="keto"><label for="ketocheck">Keto</label>
+          </fieldset>
 
-      <div class="foodContainer">
-        <fieldset class="fieldset">
-          <legend>Allergies / Diet Type</legend>
-          <input id="vegancheck" type="checkbox"><label for="vegancheck">Vegan</label>
-          <input id="gfcheck" type="checkbox"><label for="gfcheck">Gluten-Free</label>
-          <input id="vegcheck" type="checkbox"><label for="vegcheck">Vegetarian</label>
-          <input id="ketocheck" type="checkbox"><label for="ketocheck">Keto</label>
-        </fieldset>
-
-        <div class="input-group">
-          <span class="input-group-label">Enter an ingredient.</span>
-          <input class="input-group-field middle" type="text">
-          <div class="input-group-button">
-            <input type="submit" class="button" value="Submit">
+          <div class="input-group">
+            <span class="input-group-label">Enter an ingredient.</span>
+            <input class="input-group-field middle" type="text" id="user-input">
+            <div class="input-group-button">
+              <input type="submit" class="button" value="Submit">
+            </div>
           </div>
         </div>
-      </div>
+      </form>
 
       <!-- START OF FOOD OUTPUT CARDS -->
-      <div class="foodOutput-card">
+      <!-- <div class="foodOutput-card">
         <div class="row">
           <div class="card columns">
             <div class="card-divider">
@@ -97,23 +100,15 @@
               <p>It has an easy to override visual style, and is appropriately subdued.</p>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <div class="row">
-          <div class="card columns">
-            <div class="card-divider">
-              This is a header
-            </div>
-            <img src="assets/img/generic/rectangle-1.jpg">
-            <div class="card-section">
-              <h4>This is a card.</h4>
-              <p>It has an easy to override visual style, and is appropriately subdued.</p>
-            </div>
-          </div>
+          <div class="card columns" id="recipe-card">
+            
         </div>
       </div>
 
-      <div class="row">
+      <!-- <div class="row">
         <div class="card columns">
           <div class="card-divider">
             This is a header
@@ -150,7 +145,7 @@
             <p>It has an easy to override visual style, and is appropriately subdued.</p>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <!-- <div class="input-group input-group-rounded">
         <input class="input-group-field" type="search">
@@ -161,7 +156,7 @@
 
       <div class="container">
 
-        <a class="button warning small-only-expanded" href="#">Click here for a cocktail pairing!</a>
+        <a class="button warning small-only-expanded" href="cocktail.html">Click here for a cocktail pairing!</a>
 
         </form>
       </div>
@@ -179,6 +174,7 @@
       <script>
         $(document).foundation();
       </script>
+      <script src="./assets/js/logic.js"></script>
       
       <!--script for modal-->
       <script src="assets/js/modal.js"></script>
