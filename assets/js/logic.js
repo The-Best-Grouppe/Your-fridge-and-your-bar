@@ -169,6 +169,7 @@ function submitForm(event) {
       parameters: healthRestrictions,
     };
   }
+  recipeSection.innerHTML = "";
   console.log(inputObject);
   getRecipe(inputObject);
 }
