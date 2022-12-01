@@ -2,7 +2,7 @@ var buttonContainer = document.getElementById("button-container");
 var cocktailEl = document.getElementById("cocktail");
 var cocktailBtn = document.getElementById("cocktail-btn");
 var favCocktail = JSON.parse(localStorage.getItem("favorite-cocktail") || '{"drinks": []}');
-
+// Added intiial retrieval of favorites from storage or defaulting to empty
 
 function renderDrink(cocktail) {
   var imgUrl = cocktail.strDrinkThumb;
@@ -12,7 +12,6 @@ function renderDrink(cocktail) {
   var drinkDirEl = document.createElement("p");
   var drinkIngrEl = document.createElement("ul");
   var drinkSaveBtn = document.createElement("button");
-
 
   cocktailEl.innerHTML = "";
   drinkNameEl.textContent = cocktail.strDrink;
@@ -32,6 +31,7 @@ function renderDrink(cocktail) {
 
   drinkCardEl.append(drinkNameEl, drinkImgEl, drinkIngrEl, drinkDirEl, drinkSaveBtn);
 
+// Jeremy, I pushed in the favorites and wrote to local storage and trigger the notification
   drinkSaveBtn.onclick = function() {
     favCocktail.drinks.push(cocktail);
     localStorage.setItem("favorite-cocktail", JSON.stringify(favCocktail));
