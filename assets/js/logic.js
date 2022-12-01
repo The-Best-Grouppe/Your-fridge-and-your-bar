@@ -24,13 +24,13 @@ function renderRecipe(hit) {
     titleEl.textContent = title;
     calorieEl.textContent = calories + ": calories";
     imgEl.setAttribute("src", recipeImgUrl);
-    urlEl.textContent = recipeUrl;
+    urlEl.textContent = "Full recipe";
     imgEl.setAttribute("width", "200px");
-    imgEl.setAttribute("class", "align-center card-section");
-    titleEl.setAttribute("class", "align-center card-section");
-    calorieEl.setAttribute("class", "align-center card-section");
+    imgEl.setAttribute("class", "align-center");
+    titleEl.setAttribute("class", "align-center");
+    calorieEl.setAttribute("class", "align-center");
     ingredientEl.setAttribute("class", "align-center card-section");
-    urlEl.setAttribute("class", "align-center card-section");
+    urlEl.setAttribute("class", "align-center button");
     recipeCard.setAttribute("style", "width: 300px")
     recipeCard.append(titleEl, calorieEl, imgEl, ingredientEl, urlEl, saveBtnEl);
 

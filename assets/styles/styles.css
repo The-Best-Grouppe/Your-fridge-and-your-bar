@@ -1,5 +1,4 @@
 .hero-full-screen h1 {
-  font-family: 'Pacifico', cursive;
   font-size: 85px;
   color: white;
   margin-top:15px;
@@ -7,7 +6,6 @@
 }
 
 .hero-full-screen h2, #favorites h2 {
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
   color: white;
   font-weight: 90px;
@@ -20,7 +18,7 @@
 }
 
 .hero-full-screen {
-  height: 100vh;
+  height: calc(100vh - 51.5px);
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -56,7 +54,7 @@
   position: relative;
   z-index: 1;
   overflow-y: auto;
-  height: 100vh;
+  height: calc(100vh - 51.5px);
   width: 100vw;
   padding: 0 80px;
 }
@@ -123,11 +121,12 @@
   margin-right: 15px;
   color: white;
   text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .card img {
-  margin:auto;
+  margin: auto;
+  margin-top: 16px;
+  margin-bottom: 16px;
   width: 350 px;
   border-radius: 5px;
 }
@@ -152,7 +151,6 @@
   margin: auto;
   border: 2px solid black;
   border-radius: 15px;
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
   background-color: rgba(0, 0, 0, 0.4) ;
   color: white;
@@ -182,13 +180,11 @@
 }
 
 .drink-card button {
-  margin: auto;
-  text-align: center;
-  border-radius: 15px;
+  width: 100%;
 }
 
 #cocktail-btn {
-  margin:auto;
+  margin: auto;
 }
 
 #cocktail {
@@ -200,7 +196,7 @@
 #favorites {
   background: url("https://images.unsplash.com/photo-1532634922-8fe0b757fb13?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80") center center no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: calc(100vh - 51.5px);
   display: flex;
   flex-direction: row;
   overflow-x: auto;

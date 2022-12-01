@@ -44,7 +44,7 @@ function renderDrink(cocktail) {
     drinkImgEl.setAttribute("class", "card-section align-center"); 
     drinkDirEl.setAttribute("class", "card-section align-center"); 
     drinkIngrEl.setAttribute("class", "card-section align-center");
-    drinkRemoveBtn.setAttribute("class", "card-section align-center submit success button");
+    drinkRemoveBtn.setAttribute("class", "align-center button");
   
     drinkCardEl.append(drinkNameEl, drinkImgEl, drinkIngrEl, drinkDirEl, drinkRemoveBtn);
 

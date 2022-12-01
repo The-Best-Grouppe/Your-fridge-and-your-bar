@@ -20,14 +20,14 @@ function renderDrink(cocktail) {
   drinkDirEl.textContent = cocktail.strInstructions;
   drinkSaveBtn.innerHTML = "Save";
   drinkSaveBtn.setAttribute("name", "drink-save-button");
-  drinkSaveBtn.setAttribute("type", "submit");
+  drinkSaveBtn.setAttribute("type", "button");
   drinkCardEl.setAttribute("class", "card cell align-center");
   drinkCardEl.setAttribute("class", "drink-card");
   drinkNameEl.setAttribute("class", "card-section align-center");
   drinkImgEl.setAttribute("class", "card-section align-center"); 
   drinkDirEl.setAttribute("class", "card-section align-center"); 
   drinkIngrEl.setAttribute("class", "card-section align-center");
-  drinkSaveBtn.setAttribute("class", "card-section align-center submit success button");
+  drinkSaveBtn.setAttribute("class", "align-center button");
 
   drinkCardEl.append(drinkNameEl, drinkImgEl, drinkIngrEl, drinkDirEl, drinkSaveBtn);
 
