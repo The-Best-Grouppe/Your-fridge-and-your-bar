@@ -31,7 +31,7 @@
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  background: url("https://images.unsplash.com/photo-1532634922-8fe0b757fb13?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80") center center no-repeat;
+  background: url("../images/background.jpeg") center center no-repeat;
   background-size: cover;
   text-align: center;
   font: white;
@@ -188,13 +188,13 @@
 }
 
 #cocktail {
-  background: url("https://images.unsplash.com/photo-1532634922-8fe0b757fb13?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80") center center no-repeat;
+  background: url("../images/background.jpeg") center center no-repeat;
   background-size: cover;
   padding: 20px;
 }
 
 #favorites {
-  background: url("https://images.unsplash.com/photo-1532634922-8fe0b757fb13?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80") center center no-repeat;
+  background: url("../images/background.jpeg") center center no-repeat;
   background-size: cover;
   height: calc(100vh - 51.5px);
   display: flex;
