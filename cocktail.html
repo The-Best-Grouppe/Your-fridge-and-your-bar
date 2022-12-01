@@ -29,15 +29,24 @@
     </div>
     
     
-    <div id="cocktail" class="grid-x">
-  
+    <div id="cocktail" class="grid-x"></div>
     
+    <p style="display: none"><button class="button" id="trigger-notification" data-open="favorite-added">Click me for a modal</button></p>
+    <div id="favorite-added" class="reveal-modal reveal" aria-labelledby="modalTitle" aria-hidden="true" role="dialog" data-reveal>
+        <h2 id="modalTitle">Favorite added</h2>
+        <p class="lead">Favorites can be found on the Favorites page.</p>
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+            <span aria-hidden="true">&times;</span>
+          </button>
+    </div>
 
     
-   
-
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/js/foundation.min.js"
         crossorigin="anonymous"></script>
+    <script>
+        $(document).foundation();
+    </script>
     <script src="./assets/js/cocktail.js"></script>
 </body>
 </html>

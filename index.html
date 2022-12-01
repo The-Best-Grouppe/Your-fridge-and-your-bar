@@ -24,23 +24,14 @@
         <li><a href="favorite.html">Favorites</a></li>
         <li><a href="cocktail.html">Drinks</a></li>
                       <!-- START OF MODAL  -->
-        <div class="w3-container">
-          <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">How to use this page.</button>
-          <div id="id01" class="w3-modal">
-            <div class="w3-modal-content">
-              <header class="w3-container w3-black"> 
-                <span onclick="document.getElementById('id01').style.display='none'" 
-                class="w3-button w3-display-toleft">&times;</span>
-              </header>
-              <div class="w3-container">
-                <p>Enter ingredients from your fridge into the form to generate related recipes. </p>
-                <p>We specialize in specialties, you can set the parameters for special diet restrictions to get 5 results related to you. Save these results to your personal favorites for easy access. These searches are saved for life unless the world ends and the interenet breaks down. Unlike your friends, we are always here for you :)</p>
-              </div>
-              <footer class="w3-container w3-black">
-                <p>Happy Cooking!</p>
-              </footer>
-            </div>
-          </div>
+        <button class="button secondary" data-open="info-modal">How to use this page.</button>
+        <div id="info-modal" class="reveal-modal reveal" aria-labelledby="modalTitle" aria-hidden="true" role="dialog" data-reveal>
+          <h2 id="modalTitle">Happy Cooking!</h2>
+          <p class="lead">Enter ingredients from your fridge into the form to generate related recipes.</p>
+          <p>We specialize in specialties, you can set the parameters for special diet restrictions to get 5 results related to you. Save these results to your personal favorites for easy access. These searches are saved for life unless the world ends and the interenet breaks down. Unlike your friends, we are always here for you :)</p>
+          <button class="close-button" data-close aria-label="Close modal" type="button">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
                       <!-- END OF MODAL  -->
       </ul>
@@ -158,13 +149,11 @@
         </form>
       </div>
 
-<script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/js/foundation.min.js" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/js/foundation.min.js" crossorigin="anonymous"></script>
 <script>
   $(document).foundation();
 </script>
 <script src="./assets/js/logic.js"></script>
-    <!--script for modal-->
-<script src="assets/js/modal.js"></script>
 </body>
 </html>
