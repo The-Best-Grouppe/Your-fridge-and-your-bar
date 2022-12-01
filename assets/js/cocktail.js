@@ -21,7 +21,7 @@ function renderDrink(cocktail) {
   drinkDirEl.textContent = cocktail.drinks[0].strInstructions;
   drinkSaveBtn.innerHTML = "Save";
   drinkSaveBtn.setAttribute("name", "drink-save-button");
-  drinkSaveBtn.setAttribute("type", "submit");
+  drinkSaveBtn.setAttribute("type", "submit"); 
 
 
   drinkCardEl.append(drinkNameEl, drinkImgEl, drinkIngrEl, drinkDirEl, drinkSaveBtn);
@@ -49,7 +49,14 @@ function renderDrink(cocktail) {
     drinkSaveBtn.onclick = function() {
       favCocktail.push(cocktail);
       localStorage.setItem("favorite-cocktail", JSON.stringify(favCocktail));
+      updatefave();
     }
+}
+/* update favorite */ 
+function updateFave() {
+  var values = [], keys = Object.keys(localstorage), i = keys.length;
+  while (i--) { values.push( localStorage.getItem(keys[i]) ); }
+  document.getElementById("personal-fave").textContent = values;
 }
 
 function cocktail(event) {

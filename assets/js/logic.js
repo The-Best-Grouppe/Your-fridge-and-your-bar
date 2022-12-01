@@ -44,6 +44,13 @@ function renderRecipe(hit) {
       ingredientItem.textContent = hit.recipe.ingredientLines[i];
       console.log(ingredientItem);
       ingredientEl.append(ingredientItem);
+      //click save button to save recipe
+      var ingredientSaveBtn = document.getElementById("btnsave");
+      ingredientSaveBtn.onclick = function() {
+        favoriteRecipe.push(localstorage.getItem(keys[i])); }
+        document.getElementById("personal-fave").textContent = values;
+      }
+
 
     
     }
