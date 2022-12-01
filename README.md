@@ -28,7 +28,7 @@ Simply search for a recipe, and click the button to generate a cocktail!
 
     
    
-![Picture of people drinking beer](/assets/images/background.jpeg)
+![Picture of people drinking beer](/assets/images/BarAndFridgePreview.gif)
 
 
 ## Credits
@@ -54,7 +54,3 @@ Simply search for a recipe, and click the button to generate a cocktail!
 * [Edamam Food and Grocery Database](https://rapidapi.com/edamam/api/edamam-food-and-grocery-database)
 
  * [Front-end Framework: Foundation](https://get.foundation/)
-<<<<<<< HEAD
-
-=======
->>>>>>> main
