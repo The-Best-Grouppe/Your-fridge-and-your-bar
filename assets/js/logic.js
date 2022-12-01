@@ -6,44 +6,40 @@ var recipeSection = document.getElementById("recipe-card");
 var favoriteRecipe = [];
 var saveButtons = document.querySelectorAll(".save-button")
 
-
-
-
-
 function renderRecipe(hit) {
-  // for (var i=0; i < 5; i ++)
     var title = hit.recipe.label;
     var calories = Math.floor(hit.recipe.calories);
     var recipeUrl = hit.recipe.url;
     var recipeIngredients = hit.recipe.ingredientLines;
     var recipeImgUrl = hit.recipe.image;
-
-
-    // var recipeContainer = document.createElement("div")
     var recipeCard = document.createElement("div");
     var titleEl = document.createElement("h2");
     var calorieEl = document.createElement("p");
     var urlEl = document.createElement("a");
-    var ingredientEl = document.createElement("uo");
+    var ingredientEl = document.createElement("ul");
     var imgEl = document.createElement("img");
     var saveBtnEl = document.createElement("span");
-
-    recipeSection.append(recipeCard);
+    recipeCard.setAttribute("class", "card cell medium-8")
+  
     titleEl.textContent = title;
-    calorieEl.textContent = calories;
+    calorieEl.textContent = calories + ": calories";
     imgEl.setAttribute("src", recipeImgUrl);
-    urlEl.textContent = recipeUrl;
-    // saveBtn.innerHTML = "Save";
-    // // saveBtn.setAttribute("type", "submit");
-    // saveBtn.setAttribute("name", "save-button");
-    // saveBtn.setAttribute("class", "save-button");
-    recipeCard.append(titleEl, imgEl, calorieEl, ingredientEl, urlEl, saveBtnEl);
+    urlEl.textContent = "Full recipe";
+    imgEl.setAttribute("width", "200px");
+    imgEl.setAttribute("class", "align-center");
+    titleEl.setAttribute("class", "align-center");
+    calorieEl.setAttribute("class", "align-center");
+    ingredientEl.setAttribute("class", "align-center card-section");
+    urlEl.setAttribute("class", "align-center button");
+    recipeCard.setAttribute("style", "width: 300px")
+    recipeCard.append(titleEl, calorieEl, imgEl, ingredientEl, urlEl, saveBtnEl);
 
     for (var i=0; i < recipeIngredients.length; i++){
       var ingredientItem = document.createElement("li");
       ingredientItem.textContent = hit.recipe.ingredientLines[i];
       console.log(ingredientItem);
       ingredientEl.append(ingredientItem);
+<<<<<<< HEAD
       //click save button to save recipe
       var ingredientSaveBtn = document.getElementById("btnsave");
       ingredientSaveBtn.onclick = function() {
@@ -53,37 +49,11 @@ function renderRecipe(hit) {
 
 
     
+=======
+>>>>>>> e04223253fb53fd1fbd0f869d5d23accb867bb8f
     }
-
-    // for (var i=0; i < 5; i++) {
-    //   var saveBtn = document.createElement("button");
-    //   saveBtn.innerText = "Save";
-    //   function(index){
-    //     button.addEventListener("click", function() {
-    //       console.log(index)
-    //     })
-    //   }(i)
-    //   saveBtnEl.appendChild(saveBtn);
-    
-    // })
-
-      
-
-    //   })(i)
-    // }
-
-
-
-    console.log(recipeCard);
     recipeSection.append(recipeCard);
-    
-
-
 }
-
-
-
-
 
 function getRecipe(inputObject) {
   if (inputObject.parameters.includes("keto")) {
@@ -112,13 +82,14 @@ function getRecipe(inputObject) {
   } else {
     glutenParam = "";
   }
+
   var apiUrl =
     `https://api.edamam.com/api/recipes/v2?type=public&q=${inputObject.ingredient}&app_id=b3ff8b0d&app_key=3d88760733ac9419c88e6d50ef3d399a` +
     ketoParam +
     veganParam +
     vegetarianParam +
     glutenParam;
-  console.log(apiUrl);
+
   fetch(apiUrl)
     .then(function (response) {
       if (response.status !== 200) {
@@ -165,7 +136,7 @@ function submitForm(event) {
       parameters: healthRestrictions,
     };
   }
-  console.log(inputObject);
+  recipeSection.innerHTML = "";
   getRecipe(inputObject);
 }
 

@@ -3,7 +3,7 @@
 ## Description
 
 Sometimes we don't know what to eat or drink. So we've created an interactive and responsive website using 2 server-side APIs with a client-side storage for this problem. 
-We've utilized APIs to retrieve information on recipes as well as generating a random cocktail to pair with the food.
+We've utilized APIs to retrieve information on recipes as well as pairing a cocktail with your food.
 
  For our front-end framwework, we used 'foundation' to design our project. 
 
@@ -28,7 +28,7 @@ Simply search for a recipe, and click the button to generate a cocktail!
 
     
    
-    ![Yourfridge](https://user-images.githubusercontent.com/114694158/204628116-b2ad97c1-16b1-425f-a3e0-7d513b1376ec.png)
+![Picture of people drinking beer](/assets/images/background.jpeg)
 
 
 ## Credits

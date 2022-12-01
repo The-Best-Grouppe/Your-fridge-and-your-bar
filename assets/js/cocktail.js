@@ -1,56 +1,77 @@
 var buttonContainer = document.getElementById("button-container");
 var cocktailEl = document.getElementById("cocktail");
 var cocktailBtn = document.getElementById("cocktail-btn");
-var favCocktail = [];
+var favCocktail = JSON.parse(localStorage.getItem("favorite-cocktail") || '{"drinks": []}');
+// Added intiial retrieval of favorites from storage or defaulting to empty
 
 function renderDrink(cocktail) {
-  var imgUrl = cocktail.drinks[0].strDrinkThumb;
-  var containerEl = document.createElement("div");
+  var imgUrl = cocktail.strDrinkThumb;
   var drinkCardEl = document.createElement("div");
   var drinkNameEl = document.createElement("h2");
   var drinkImgEl = document.createElement("img");
   var drinkDirEl = document.createElement("p");
-  var drinkIngrEl = document.createElement("uo");
+  var drinkIngrEl = document.createElement("ul");
   var drinkSaveBtn = document.createElement("button");
 
-
   cocktailEl.innerHTML = "";
-  containerEl.append(drinkCardEl);
-  drinkNameEl.textContent = cocktail.drinks[0].strDrink;
+  drinkNameEl.textContent = cocktail.strDrink;
   drinkImgEl.setAttribute("src", imgUrl);
-  drinkDirEl.textContent = cocktail.drinks[0].strInstructions;
+  drinkImgEl.setAttribute("class", "card-section align-center")
+  drinkDirEl.textContent = cocktail.strInstructions;
   drinkSaveBtn.innerHTML = "Save";
   drinkSaveBtn.setAttribute("name", "drink-save-button");
+<<<<<<< HEAD
   drinkSaveBtn.setAttribute("type", "submit"); 
 
+=======
+  drinkSaveBtn.setAttribute("type", "button");
+  drinkCardEl.setAttribute("class", "card cell align-center");
+  drinkCardEl.setAttribute("class", "drink-card");
+  drinkNameEl.setAttribute("class", "card-section align-center");
+  drinkImgEl.setAttribute("class", "card-section align-center"); 
+  drinkDirEl.setAttribute("class", "card-section align-center"); 
+  drinkIngrEl.setAttribute("class", "card-section align-center");
+  drinkSaveBtn.setAttribute("class", "align-center button");
+>>>>>>> e04223253fb53fd1fbd0f869d5d23accb867bb8f
 
   drinkCardEl.append(drinkNameEl, drinkImgEl, drinkIngrEl, drinkDirEl, drinkSaveBtn);
 
+// Jeremy, I pushed in the favorites and wrote to local storage and trigger the notification
+  drinkSaveBtn.onclick = function() {
+    favCocktail.drinks.push(cocktail);
+    localStorage.setItem("favorite-cocktail", JSON.stringify(favCocktail));
+    $('#trigger-notification').click();
+  }
+
   for (var i = 1; i < 16; i++) {
     var ingredient = document.createElement("li");
-    if (cocktail.drinks[0][`strIngredient${i}`] == null) {
+    if (cocktail[`strIngredient${i}`] == null) {
       break;
     }
-    else if (cocktail.drinks[0][`strMeasure${i}`] == null) {
-        ingredient.textContent = cocktail.drinks[0][`strIngredient${i}`];
+    else if (cocktail[`strMeasure${i}`] == null) {
+        ingredient.textContent = cocktail[`strIngredient${i}`];
     } 
     else {
         ingredient.textContent =
-          cocktail.drinks[0][`strMeasure${i}`] +
+          cocktail[`strMeasure${i}`] +
           ": " +
-          cocktail.drinks[0][`strIngredient${i}`];
+          cocktail[`strIngredient${i}`];
         
     }
     drinkIngrEl.append(ingredient);
 
-    cocktailEl.append(containerEl);
+    cocktailEl.append(drinkCardEl);
     
     }
+<<<<<<< HEAD
     drinkSaveBtn.onclick = function() {
       favCocktail.push(cocktail);
       localStorage.setItem("favorite-cocktail", JSON.stringify(favCocktail));
       updatefave();
     }
+=======
+
+>>>>>>> e04223253fb53fd1fbd0f869d5d23accb867bb8f
 }
 /* update favorite */ 
 function updateFave() {
@@ -74,7 +95,7 @@ function cocktail(event) {
         console.log(data.drinks[0].strDrink);
         console.log(data.drinks[0].strDrinkThumb);
         console.log(data.drinks[0].strInstructions);
-        renderDrink(data);
+        renderDrink(data.drinks[0]);
       });
     })
     .catch(function (err) {
