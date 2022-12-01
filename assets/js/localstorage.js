@@ -38,7 +38,7 @@ function renderDrink(cocktail) {
     drinkRemoveBtn.innerHTML = "Remove";
     drinkRemoveBtn.setAttribute("name", "drink-save-button");
     drinkRemoveBtn.setAttribute("type", "submit");
-    drinkCardEl.setAttribute("class", "card cell align-center");
+    drinkCardEl.setAttribute("class", "card cell medium-4 align-center");
     drinkCardEl.setAttribute("class", "drink-card");
     drinkNameEl.setAttribute("class", "card-section align-center");
     drinkImgEl.setAttribute("class", "card-section align-center"); 
@@ -73,9 +73,8 @@ function renderDrink(cocktail) {
           
       }
       drinkIngrEl.append(ingredient);
-  
-      return drinkCardEl;
     }
+    return drinkCardEl;
 }
 
 setupView();
